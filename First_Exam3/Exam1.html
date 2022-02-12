@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <title>Account Setting</title>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+        <script type="text/javascript">
+          function wishnew(){
+              debugger;
+              document.getElementById("NewWish").style.display="block"
+              document.getElementById("WishList").style.display="none"
+          }
+          function listwish(){
+              debugger;
+              debugger;
+              document.getElementById("NewWish").style.display="none"
+              document.getElementById("WishList").style.display="block"
+          }
+          function canclee(){
+            document.getElementById("NewWish").style.display="block"
+
+          }
+
+
+          /*  <div class="ContentRow">
+        <div class="Row">
+            <div class="TasksBox">
+                <span class="WishElement">Travel</span>
+                <img src="emoji-neutral.svg" class="iconstyle" />
+            </div>
+        </div>
+    </div>*/
+
+    function saves(){
+        debugger;
+      var txt_value=document.getElementById("txtNewWish").value
+      var listw=document.getElementById("WishList")
+       var div_1= document.createElement("div")
+       div_1.setAttribute("class","ContentRow")
+       var div_2=document.createElement("div")
+       div_2.setAttribute("class","Row")
+       div_1.appendChild(div_2)
+       var div_3=document.createElement("div")
+       div_3.setAttribute("class","TasksBox")
+       div_2.appendChild(div_3)
+       var span_text=document.createElement("span")
+       span_text.setAttribute("class","WishElement")
+       var txt_value=document.getElementById("txtNewWish").value
+  var    txt1=document.createTextNode(txt_value)
+span_text.appendChild(txt1)
+       div_3.appendChild(span_text)
+       var pic=document.createElement("img");
+       pic.setAttribute("class","iconstyle")
+       pic.setAttribute("onclick","smile(this)")
+
+         pic.src="emoji-neutral.svg";
+        div_3.appendChild(pic)
+        listw.appendChild(div_1)
+
+       }
+
+       function smile(x){
+           debugger
+           var span_pic=x;
+       //  var pic_Span=span_pic.getElementById("smileimg")
+       span_pic.setAttribute("src","emoji-smile.svg")
+
+}
+
+      
+
+
+
+    
+
+
+
+
+
+        </script>
+
+        </script>
+    </head>
+    <body>
+<div class="ContentBox">
+<div class="Menu">
+<div class="MenuItems" id="Menu_NewWish" >
+    <span class="MenuText" onclick="wishnew()" >New Wish</span>
+</div>
+<div class="MenuItems" id="Menu_WishList" >
+    <span class="MenuText" onclick="listwish()" >WishList</span>
+</div>
+</div>
+<div class="Content" >
+
+    <div id="NewWish" class="ContentDev">
+
+
+    <div class="ContentRow">
+    <span>
+        New Wish
+    </span>
+    <div class="Row">
+        <input type="text" id="txtNewWish" />
+    </div>
+    <div class="actionBar">
+        <div class="SaveChangesBox">
+            <button class="btn ButtonSubmit" id="btnSave" onclick="saves()">Save Changes</button>
+        </div>
+        <div class="CancelBox">
+            <button class="btn btn-default" id="btnCancel" onclick="canclee()">Cancel</button>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+<div id="WishList" class="ContentDev" style="display: none;">
+
+
+    
+    <div class="ContentRow">
+        <div class="Row">
+            <div class="TasksBox">
+                <span class="WishElement">Travel</span>
+                <img src="emoji-neutral.svg" class="iconstyle" id="old" onclick="smile(this)" />
+            </div>
+        </div>
+    </div>
+    <div class="ContentRow">
+        <div class="Row">
+            <div class="TasksBox">
+                <span class="WishElement">Watch Match Live</span>
+                <img src="emoji-smile.svg" class="iconstyle"  id="smileimg" />
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+</div>
+
+  
+  
+</div>
+</div>
+
+
+    </body>
+</html> 
+
